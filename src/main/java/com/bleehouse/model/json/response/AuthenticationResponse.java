@@ -1,10 +1,9 @@
 package com.bleehouse.model.json.response;
+import lombok.Data;
 
-import com.bleehouse.model.base.ModelBase;
+@Data
+public class AuthenticationResponse {
 
-public class AuthenticationResponse extends ModelBase {
-
-	private static final long serialVersionUID = -6624726180748515507L;
 	private String token;
 
 	public AuthenticationResponse() {
@@ -14,13 +13,4 @@ public class AuthenticationResponse extends ModelBase {
 	public AuthenticationResponse(String token) {
 		this.setToken(token);
 	}
-
-	public String getToken() {
-		return this.token;
-	}
-
-	public void setToken(String token) {
-		this.token = token;
-	}
-
 }

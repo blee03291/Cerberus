@@ -26,12 +26,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("${cerberus.route.authentication}")
+@RequestMapping("${bleehouse.route.authentication}")
 public class AuthenticationController {
 
   private final Logger logger = Logger.getLogger(this.getClass());
 
-  @Value("${cerberus.token.header}")
+  @Value("${bleehouse.token.header}")
   private String tokenHeader;
 
   @Autowired
@@ -63,7 +63,7 @@ public class AuthenticationController {
     return ResponseEntity.ok(new AuthenticationResponse(token));
   }
 
-  @RequestMapping(value = "${cerberus.route.authentication.refresh}", method = RequestMethod.GET)
+  @RequestMapping(value = "${bleehouse.route.authentication.refresh}", method = RequestMethod.GET)
   public ResponseEntity<?> authenticationRequest(HttpServletRequest request) {
     String token = request.getHeader(this.tokenHeader);
     String username = this.tokenUtils.getUsernameFromToken(token);

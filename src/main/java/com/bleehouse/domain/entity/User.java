@@ -2,29 +2,42 @@ package com.bleehouse.domain.entity;
 
 import java.util.Date;
 
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GenerationType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-
-import com.bleehouse.domain.base.DomainBase;
-
 import lombok.Data;
 
 @SuppressWarnings("serial")
 @Data
 @Entity
 @Table(name = "users")
-public class User extends DomainBase {
-
+public class User {
+	
+  @Id
+	@Column(name = "id")
+  	@GeneratedValue(strategy = GenerationType.IDENTITY)
+  	@SequenceGenerator(name = "users_seq", sequenceName = "users_seq", allocationSize = 1, initialValue = 100)
+  	@Basic(optional = false)  
   private Long id;
+  
+  @Column(name = "username")
   private String username;
+  
+  @Column(name = "password")
   private String password;
+  
+  @Column(name = "email")
   private String email;
+  
+  @Column(name = "last_password_reset")
   private Date lastPasswordReset;
+  
+  @Column(name = "authorities")
   private String authorities;
 
   public User() {
@@ -38,43 +51,5 @@ public class User extends DomainBase {
     this.setLastPasswordReset(lastPasswordReset);
     this.setAuthorities(authorities);
   }
-
-  @Id
-	@Column(name = "id")
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_seq")
-	@SequenceGenerator(name = "users_seq", sequenceName = "users_seq", allocationSize = 1)
-  public Long getId() {
-    return this.id;
-  }
-
-  @Column(name = "username")
-  public String getUsername() {
-    return this.username;
-  }
-
-
-  @Column(name = "password")
-  public String getPassword() {
-    return this.password;
-  }
-
-
-  @Column(name = "email")
-  public String getEmail() {
-    return this.email;
-  }
-
-  @Column(name = "last_password_reset")
-  public Date getLastPasswordReset() {
-    return this.lastPasswordReset;
-  }
-
-  
-  @Column(name = "authorities")
-  public String getAuthorities() {
-    return this.authorities;
-  }
-
-
 
 }

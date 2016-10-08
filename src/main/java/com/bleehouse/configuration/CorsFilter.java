@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class CorsFilter implements Filter {
 
-  @Value("${cerberus.token.header}")
+  @Value("${bleehouse.token.header}")
   private String tokenHeader;
 
   public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {

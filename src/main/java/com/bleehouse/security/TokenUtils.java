@@ -25,10 +25,10 @@ public class TokenUtils {
   private final String AUDIENCE_MOBILE    = "mobile";
   private final String AUDIENCE_TABLET    = "tablet";
 
-  @Value("${cerberus.token.secret}")
+  @Value("${bleehouse.token.secret}")
   private String secret;
 
-  @Value("${cerberus.token.expiration}")
+  @Value("${bleehouse.token.expiration}")
   private Long expiration;
 
   public String getUsernameFromToken(String token) {

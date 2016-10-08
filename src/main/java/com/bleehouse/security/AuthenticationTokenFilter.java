@@ -20,7 +20,7 @@ import org.springframework.stereotype.Component;
 
 public class AuthenticationTokenFilter extends UsernamePasswordAuthenticationFilter {
 
-  @Value("${cerberus.token.header}")
+  @Value("${bleehouse.token.header}")
   private String tokenHeader;
 
   @Autowired
