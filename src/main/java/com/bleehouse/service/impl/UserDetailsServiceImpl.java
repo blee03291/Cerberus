@@ -2,11 +2,9 @@ package com.bleehouse.service.impl;
 
 import com.bleehouse.domain.entity.User;
 import com.bleehouse.model.factory.BleehouseUserFactory;
-import com.bleehouse.model.security.BleehouseUser;
 import com.bleehouse.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

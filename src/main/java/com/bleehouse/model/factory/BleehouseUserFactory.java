@@ -2,10 +2,6 @@ package com.bleehouse.model.factory;
 
 import com.bleehouse.domain.entity.User;
 import com.bleehouse.model.security.BleehouseUser;
-
-import java.util.Collection;
-
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 
 public class BleehouseUserFactory {

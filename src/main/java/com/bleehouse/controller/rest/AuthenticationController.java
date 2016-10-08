@@ -7,8 +7,6 @@ import com.bleehouse.security.TokenUtils;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.log4j.Logger;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -28,8 +26,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("${bleehouse.route.authentication}")
 public class AuthenticationController {
-
-  private final Logger logger = Logger.getLogger(this.getClass());
 
   @Value("${bleehouse.token.header}")
   private String tokenHeader;
