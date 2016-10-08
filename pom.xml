@@ -17,7 +17,6 @@
     <spring-boot.version>1.4.0.RELEASE</spring-boot.version>
     <spring-framework.version>4.1.6.RELEASE</spring-framework.version>
     <jjwt.version>0.4</jjwt.version>
-    <h2.version>1.4.188</h2.version>
     <jackson.version>2.5.3</jackson.version>
     <apache-commons.version>3.0</apache-commons.version>
     <junit.version>4.12</junit.version>
@@ -65,15 +64,13 @@
       <version>${jjwt.version}</version>
     </dependency>
     <dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>${jackson.version}</version>
+		<groupId>com.fasterxml.jackson.core</groupId>
+		<artifactId>jackson-databind</artifactId>
 		</dependency>
     <dependency>
-      <groupId>com.h2database</groupId>
-      <artifactId>h2</artifactId>
-      <version>${h2.version}</version>
-    </dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>    
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
@@ -82,16 +79,13 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
     
 	<dependency>
 	  <groupId>org.postgresql</groupId>
 	  <artifactId>postgresql</artifactId>
-	  <version>9.4-1206-jdbc42</version>
 	</dependency>    
-    
   </dependencies>
 
   <!-- Build information -->
