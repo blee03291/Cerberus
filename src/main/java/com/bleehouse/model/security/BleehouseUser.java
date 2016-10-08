@@ -8,7 +8,7 @@ import java.util.Date;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-public class CerberusUser implements UserDetails {
+public class BleehouseUser implements UserDetails {
 
   private Long id;
   private String username;
@@ -21,11 +21,11 @@ public class CerberusUser implements UserDetails {
   private Boolean credentialsNonExpired = true;
   private Boolean enabled = true;
 
-  public CerberusUser() {
+  public BleehouseUser() {
     super();
   }
 
-  public CerberusUser(Long id, String username, String password, String email, Date lastPasswordReset, Collection<? extends GrantedAuthority> authorities) {
+  public BleehouseUser(Long id, String username, String password, String email, Date lastPasswordReset, Collection<? extends GrantedAuthority> authorities) {
     this.setId(id);
     this.setUsername(username);
     this.setPassword(password);

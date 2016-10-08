@@ -1,8 +1,8 @@
 package com.bleehouse.service.impl;
 
 import com.bleehouse.domain.entity.User;
-import com.bleehouse.model.factory.CerberusUserFactory;
-import com.bleehouse.model.security.CerberusUser;
+import com.bleehouse.model.factory.BleehouseUserFactory;
+import com.bleehouse.model.security.BleehouseUser;
 import com.bleehouse.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     if (user == null) {
       throw new UsernameNotFoundException(String.format("No user found with username '%s'.", username));
     } else {
-      return CerberusUserFactory.create(user);
+      return BleehouseUserFactory.create(user);
     }
   }
 

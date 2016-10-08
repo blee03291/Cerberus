@@ -13,7 +13,7 @@ import org.springframework.mobile.device.Device;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
-import com.bleehouse.model.security.CerberusUser;
+import com.bleehouse.model.security.BleehouseUser;
 
 @Component
 public class TokenUtils {
@@ -156,7 +156,7 @@ public class TokenUtils {
   }
 
   public Boolean validateToken(String token, UserDetails userDetails) {
-    CerberusUser user = (CerberusUser) userDetails;
+    BleehouseUser user = (BleehouseUser) userDetails;
     final String username = this.getUsernameFromToken(token);
     final Date created = this.getCreatedDateFromToken(token);
     final Date expiration = this.getExpirationDateFromToken(token);

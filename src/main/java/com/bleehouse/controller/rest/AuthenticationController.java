@@ -2,7 +2,7 @@ package com.bleehouse.controller.rest;
 
 import com.bleehouse.model.json.request.AuthenticationRequest;
 import com.bleehouse.model.json.response.AuthenticationResponse;
-import com.bleehouse.model.security.CerberusUser;
+import com.bleehouse.model.security.BleehouseUser;
 import com.bleehouse.security.TokenUtils;
 
 import javax.servlet.http.HttpServletRequest;
@@ -67,7 +67,7 @@ public class AuthenticationController {
   public ResponseEntity<?> authenticationRequest(HttpServletRequest request) {
     String token = request.getHeader(this.tokenHeader);
     String username = this.tokenUtils.getUsernameFromToken(token);
-    CerberusUser user = (CerberusUser) this.userDetailsService.loadUserByUsername(username);
+    BleehouseUser user = (BleehouseUser) this.userDetailsService.loadUserByUsername(username);
     if (this.tokenUtils.canTokenBeRefreshed(token, user.getLastPasswordReset())) {
       String refreshedToken = this.tokenUtils.refreshToken(token);
       return ResponseEntity.ok(new AuthenticationResponse(refreshedToken));

@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 
-import com.bleehouse.model.security.CerberusUser;
+import com.bleehouse.model.security.BleehouseUser;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertEquals;
@@ -15,7 +15,7 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
-public class CerberusUserTest {
+public class BleehouseUserTest {
 
   private final Long ID = 1L;
   private final String USERNAME = "username";
@@ -30,7 +30,7 @@ public class CerberusUserTest {
 
   @Test
   public void callingCerberusUserConstructorWithoutParametersCreatesExpectedObject() {
-    CerberusUser cerberusUser = new CerberusUser();
+    BleehouseUser cerberusUser = new BleehouseUser();
 
     assertNull(cerberusUser.getId());
     assertNull(cerberusUser.getUsername());
@@ -46,7 +46,7 @@ public class CerberusUserTest {
 
   @Test
   public void callingCerberusUserConstructorWithParametersCreatesExpectedObject() {
-    CerberusUser cerberusUser = new CerberusUser(ID, USERNAME, PASSWORD, EMAIL, LAST_PASSWORD_RESET, AUTHORITIES);
+    BleehouseUser cerberusUser = new BleehouseUser(ID, USERNAME, PASSWORD, EMAIL, LAST_PASSWORD_RESET, AUTHORITIES);
 
     assertThat(cerberusUser.getId(), is(ID));
     assertThat(cerberusUser.getUsername(), is(USERNAME));
@@ -62,7 +62,7 @@ public class CerberusUserTest {
 
   @Test
   public void callingCerberusUserGettersAndSettersReturnsExpectedObjects() {
-    CerberusUser cerberusUser = new CerberusUser();
+    BleehouseUser cerberusUser = new BleehouseUser();
 
     cerberusUser.setId(ID);
     cerberusUser.setUsername(USERNAME);
