@@ -3,12 +3,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <!-- Application information -->
-  <groupId>com.brahalla.Cerberus</groupId>
-  <artifactId>Cerberus</artifactId>
+  <groupId>com.bleehouse</groupId>
+  <artifactId>Bleehouse</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>Cerberus</name>
+  <name>Bleehouse</name>
   <description>Example stateless authorization server using JSON web tokens</description>
-  <url>https://github.com/brahalla/Cerberus</url>
+  <url>https://github.com/blee03291/Cerberus</url>
   <inceptionYear>2015</inceptionYear>
 
   <!-- Properties information -->
