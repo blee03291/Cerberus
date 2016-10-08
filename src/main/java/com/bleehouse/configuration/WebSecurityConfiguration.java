@@ -2,7 +2,6 @@ package com.bleehouse.configuration;
 
 import com.bleehouse.security.AuthenticationTokenFilter;
 import com.bleehouse.security.EntryPointUnauthorizedHandler;
-import com.bleehouse.security.TokenUtils;
 import com.bleehouse.service.SecurityService;
 
 import org.springframework.beans.factory.annotation.Autowired;

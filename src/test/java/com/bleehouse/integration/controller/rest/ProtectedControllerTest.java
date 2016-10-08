@@ -35,10 +35,10 @@ public class ProtectedControllerTest {
   private AuthenticationRequest authenticationRequest;
   private String authenticationToken;
 
-  @Value("${cerberus.route.authentication}")
+  @Value("${bleehouse.route.authentication}")
   private String authenticationRoute;
 
-  @Value("${cerberus.route.protected}")
+  @Value("${bleehouse.route.protected}")
   private String protectedRoute;
 
   @Before

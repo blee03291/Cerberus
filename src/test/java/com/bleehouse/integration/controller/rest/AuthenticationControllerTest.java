@@ -37,10 +37,10 @@ public class AuthenticationControllerTest {
   private AuthenticationRequest authenticationRequest;
   private String authenticationToken;
 
-  @Value("${cerberus.route.authentication}")
+  @Value("${bleehouse.route.authentication}")
   private String authenticationRoute;
 
-  @Value("${cerberus.route.authentication.refresh}")
+  @Value("${bleehouse.route.authentication.refresh}")
   private String refreshRoute;
 
   @Autowired
